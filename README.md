@@ -1,56 +1,63 @@
-# Personal Portfolio - Sai Mohan Reddy
+# Personal Portfolio Website
 
-A modern, responsive personal portfolio website built with Next.js, showcasing Python development, AI/ML projects, and full-stack applications.
+A modern, responsive personal portfolio website built with Next.js, React, and Tailwind CSS. Features smooth animations, dark/light theme toggle, and a clean, professional design.
 
-## 🌟 Features
+## 🚀 Features
 
-- **Responsive Design**: Mobile-first approach with Tailwind CSS
-- **Dark/Light Mode**: Theme toggle with system preference detection
-- **Smooth Animations**: Framer Motion animations throughout
+- **Modern Design**: Clean, minimalist interface with smooth animations
+- **Responsive Layout**: Mobile-first design that works on all devices
+- **Dark/Light Theme**: Toggle between dark and light modes
+- **Smooth Animations**: Framer Motion powered animations throughout
 - **SEO Optimized**: Meta tags, Open Graph, and Twitter Card support
-- **Google Analytics**: Built-in analytics integration
-- **GitHub Pages Ready**: Configured for static deployment
+- **Performance**: Optimized for fast loading and smooth interactions
 
-## 🚀 Tech Stack
+## 🛠️ Tech Stack
 
 - **Framework**: Next.js 14 with App Router
 - **Language**: TypeScript
 - **Styling**: Tailwind CSS
 - **Animations**: Framer Motion
 - **Icons**: Lucide React
-- **Deployment**: GitHub Pages (Static Export)
+- **Deployment**: Vercel, Netlify, or any static hosting
 
 ## 📁 Project Structure
 
 ```
 portfolio/
 ├── app/                    # Next.js App Router
-│   ├── globals.css        # Global styles
-│   ├── layout.tsx         # Root layout
-│   └── page.tsx           # Home page
+│   ├── layout.tsx         # Root layout with metadata
+│   ├── page.tsx           # Home page
+│   └── globals.css        # Global styles
 ├── components/             # React components
 │   ├── Header.tsx         # Navigation header
 │   ├── Hero.tsx           # Hero section
 │   ├── About.tsx          # About section
 │   ├── Experience.tsx     # Work experience
 │   ├── Education.tsx      # Education details
-│   ├── Projects.tsx       # Project showcase
-│   ├── Achievements.tsx   # Awards & certifications
+│   ├── Projects.tsx       # Portfolio projects
+│   ├── Achievements.tsx   # Awards and recognition
 │   ├── Contact.tsx        # Contact information
 │   ├── Footer.tsx         # Footer section
 │   ├── ThemeProvider.tsx  # Theme context
 │   └── Analytics.tsx      # Google Analytics
 ├── public/                 # Static assets
-├── next.config.js         # Next.js configuration
-├── tailwind.config.js     # Tailwind CSS configuration
-└── package.json           # Dependencies
+│   ├── resume.pdf         # Resume file
+│   └── og-image.jpg       # Open Graph image
+└── package.json           # Dependencies and scripts
 ```
 
-## 🛠️ Installation
+## 🚀 Getting Started
+
+### Prerequisites
+
+- Node.js 18+ 
+- npm or yarn
+
+### Installation
 
 1. **Clone the repository**
    ```bash
-   git clone https://github.com/mohanreddy8474/portfolio.git
+   git clone <your-repo-url>
    cd portfolio
    ```
 
@@ -59,7 +66,7 @@ portfolio/
    npm install
    ```
 
-3. **Run development server**
+3. **Run the development server**
    ```bash
    npm run dev
    ```
@@ -67,125 +74,96 @@ portfolio/
 4. **Open your browser**
    Navigate to [http://localhost:3000](http://localhost:3000)
 
-## 🚀 Deployment to GitHub Pages
+## 📝 Customization
 
-### Prerequisites
-- GitHub repository named `portfolio`
-- GitHub Pages enabled in repository settings
+### Personal Information
+Update the following files with your information:
+- `components/Hero.tsx` - Name, tagline, social links
+- `components/About.tsx` - Bio, skills, experience
+- `components/Experience.tsx` - Work history
+- `components/Education.tsx` - Educational background
+- `components/Projects.tsx` - Portfolio projects
+- `components/Achievements.tsx` - Awards and certifications
+- `components/Contact.tsx` - Contact details
 
-### Deployment Steps
+### Styling
+- Modify `app/globals.css` for custom CSS
+- Update Tailwind classes in components
+- Customize color scheme in CSS variables
 
-1. **Build and Export**
-   ```bash
-   npm run build
-   ```
+### Theme
+- Modify `components/ThemeProvider.tsx` for theme customization
+- Add new themes or modify existing ones
 
-2. **Deploy to GitHub Pages**
-   ```bash
-   npm run deploy
-   ```
+## 🎨 Available Scripts
 
-3. **Configure GitHub Pages**
-   - Go to repository Settings → Pages
-   - Source: Deploy from a branch
-   - Branch: `gh-pages` (or your preferred branch)
-   - Folder: `/ (root)`
-
-4. **Update Repository Settings**
-   - Enable GitHub Pages
-   - Set branch to deploy from
-   - Your site will be available at: `https://mohanreddy8474.github.io/portfolio`
-
-### Alternative: GitHub Actions (Recommended)
-
-Create `.github/workflows/deploy.yml`:
-
-```yaml
-name: Deploy to GitHub Pages
-
-on:
-  push:
-    branches: [ main ]
-
-jobs:
-  deploy:
-    runs-on: ubuntu-latest
-    steps:
-      - uses: actions/checkout@v3
-      - uses: actions/setup-node@v3
-        with:
-          node-version: '18'
-      - run: npm ci
-      - run: npm run build
-      - name: Deploy
-        uses: peaceiris/actions-gh-pages@v3
-        with:
-          github_token: ${{ secrets.GITHUB_TOKEN }}
-          publish_dir: ./out
-```
-
-## ⚙️ Configuration
-
-### Environment Variables
-Create `.env.local` for local development:
-```env
-NEXT_PUBLIC_GA_ID=your-google-analytics-id
-```
-
-### Customization
-- **Personal Info**: Update content in component files
-- **Styling**: Modify `tailwind.config.js` and `globals.css`
-- **Analytics**: Update Google Analytics ID in `Analytics.tsx`
-- **SEO**: Update metadata in `app/layout.tsx`
-
-## 📱 Sections
-
-- **Hero**: Introduction, tagline, and call-to-action
-- **About**: Professional bio, skills, and experience
-- **Experience**: Work history and responsibilities
-- **Education**: Academic background and achievements
-- **Projects**: Portfolio of projects with tech stacks
-- **Achievements**: Awards, certifications, and publications
-- **Contact**: Contact information and social links
-
-## 🎨 Design Features
-
-- **Minimalist**: Clean, professional design
-- **Responsive**: Mobile-first responsive design
-- **Accessible**: WCAG compliant with proper ARIA labels
-- **Performance**: Optimized for fast loading
-- **SEO**: Search engine optimized with proper meta tags
-
-## 🔧 Development
-
-### Available Scripts
 - `npm run dev` - Start development server
 - `npm run build` - Build for production
 - `npm run start` - Start production server
 - `npm run lint` - Run ESLint
-- `npm run export` - Export static files
-- `npm run deploy` - Build and prepare for GitHub Pages
 
-### Code Style
-- TypeScript for type safety
-- ESLint for code quality
-- Prettier for code formatting
-- Component-based architecture
+## 🌐 Deployment
+
+### Vercel (Recommended)
+1. Push your code to GitHub
+2. Connect your repository to Vercel
+3. Deploy automatically on every push
+
+### Netlify
+1. Build your project: `npm run build`
+2. Upload the `out` folder to Netlify
+3. Configure build settings
+
+### Static Hosting
+1. Build: `npm run build`
+2. Upload the `out` folder to your hosting provider
+
+## 📱 Responsive Design
+
+The portfolio is designed to work seamlessly across all devices:
+- **Mobile**: Optimized for small screens with touch-friendly interactions
+- **Tablet**: Responsive grid layouts and navigation
+- **Desktop**: Full-featured experience with hover effects
+
+## 🎭 Animations
+
+Built with Framer Motion for smooth, performant animations:
+- **Page Transitions**: Smooth page loading and navigation
+- **Scroll Animations**: Elements animate as they come into view
+- **Hover Effects**: Interactive feedback on user interactions
+- **Staggered Animations**: Sequential element reveals
+
+## 🔧 Configuration
+
+### Environment Variables
+Create a `.env.local` file for any environment-specific configuration:
+```env
+NEXT_PUBLIC_GA_ID=your-google-analytics-id
+```
+
+### Google Analytics
+1. Get your Google Analytics ID
+2. Add it to your environment variables
+3. The Analytics component will automatically track page views
+
+## 🤝 Contributing
+
+1. Fork the repository
+2. Create a feature branch
+3. Make your changes
+4. Submit a pull request
 
 ## 📄 License
 
 This project is open source and available under the [MIT License](LICENSE).
 
-## 🤝 Contributing
+## 🙏 Acknowledgments
 
-Contributions are welcome! Please feel free to submit a Pull Request.
-
-## 📞 Contact
-
-- **Email**: ssmohanreddy@gmail.com
-- **LinkedIn**: [mohan8474](https://www.linkedin.com/in/mohan8474/)
-- **GitHub**: [mohanreddy8474](https://github.com/mohanreddy8474)
+- Built with [Next.js](https://nextjs.org/)
+- Styled with [Tailwind CSS](https://tailwindcss.com/)
+- Animated with [Framer Motion](https://www.framer.com/motion/)
+- Icons from [Lucide React](https://lucide.dev/)
 
 ---
 
-Built with ❤️ using Next.js, Tailwind CSS, and Framer Motion
+**Built with ❤️ using modern web technologies**
