@@ -1,132 +1,176 @@
-# Personal Portfolio Website
+# Personal Portfolio - Sai Mohan Reddy
 
-A modern, responsive personal portfolio website built with Next.js, TypeScript, and Tailwind CSS. Features a clean design with dark/light mode toggle, smooth animations, and comprehensive sections showcasing professional experience, projects, and skills.
+A modern, responsive personal portfolio website built with Next.js, showcasing Python development, AI/ML projects, and full-stack applications.
 
-## ✨ Features
+## 🌟 Features
 
-- **Modern Design**: Clean, minimalist design inspired by hugo-profile.netlify.app
-- **Responsive**: Mobile-first responsive design that works on all devices
-- **Dark/Light Mode**: Toggle between dark and light themes
-- **Smooth Animations**: Framer Motion animations for enhanced user experience
+- **Responsive Design**: Mobile-first approach with Tailwind CSS
+- **Dark/Light Mode**: Theme toggle with system preference detection
+- **Smooth Animations**: Framer Motion animations throughout
 - **SEO Optimized**: Meta tags, Open Graph, and Twitter Card support
-- **Performance**: Built with Next.js for optimal performance
-- **Accessibility**: Semantic HTML and ARIA labels for better accessibility
+- **Google Analytics**: Built-in analytics integration
+- **GitHub Pages Ready**: Configured for static deployment
 
-## 🚀 Sections
-
-1. **Hero Section** - Introduction with call-to-action buttons
-2. **About Me** - Professional bio and skills
-3. **Experience** - Work history and responsibilities
-4. **Education** - Academic background and achievements
-5. **Projects** - Portfolio of projects with tech stack
-6. **Achievements** - Awards, certifications, and recognition
-7. **Blog** - Latest blog posts and articles
-8. **Contact** - Contact form and information
-
-## 🛠️ Tech Stack
+## 🚀 Tech Stack
 
 - **Framework**: Next.js 14 with App Router
 - **Language**: TypeScript
 - **Styling**: Tailwind CSS
 - **Animations**: Framer Motion
 - **Icons**: Lucide React
-- **Deployment**: Ready for Netlify/Vercel
+- **Deployment**: GitHub Pages (Static Export)
 
-## 📦 Installation
+## 📁 Project Structure
 
-1. Clone the repository:
-```bash
-git clone https://github.com/yourusername/portfolio.git
-cd portfolio
+```
+portfolio/
+├── app/                    # Next.js App Router
+│   ├── globals.css        # Global styles
+│   ├── layout.tsx         # Root layout
+│   └── page.tsx           # Home page
+├── components/             # React components
+│   ├── Header.tsx         # Navigation header
+│   ├── Hero.tsx           # Hero section
+│   ├── About.tsx          # About section
+│   ├── Experience.tsx     # Work experience
+│   ├── Education.tsx      # Education details
+│   ├── Projects.tsx       # Project showcase
+│   ├── Achievements.tsx   # Awards & certifications
+│   ├── Contact.tsx        # Contact information
+│   ├── Footer.tsx         # Footer section
+│   ├── ThemeProvider.tsx  # Theme context
+│   └── Analytics.tsx      # Google Analytics
+├── public/                 # Static assets
+├── next.config.js         # Next.js configuration
+├── tailwind.config.js     # Tailwind CSS configuration
+└── package.json           # Dependencies
 ```
 
-2. Install dependencies:
-```bash
-npm install
-# or
-yarn install
-# or
-pnpm install
+## 🛠️ Installation
+
+1. **Clone the repository**
+   ```bash
+   git clone https://github.com/mohanreddy8474/portfolio.git
+   cd portfolio
+   ```
+
+2. **Install dependencies**
+   ```bash
+   npm install
+   ```
+
+3. **Run development server**
+   ```bash
+   npm run dev
+   ```
+
+4. **Open your browser**
+   Navigate to [http://localhost:3000](http://localhost:3000)
+
+## 🚀 Deployment to GitHub Pages
+
+### Prerequisites
+- GitHub repository named `portfolio`
+- GitHub Pages enabled in repository settings
+
+### Deployment Steps
+
+1. **Build and Export**
+   ```bash
+   npm run build
+   ```
+
+2. **Deploy to GitHub Pages**
+   ```bash
+   npm run deploy
+   ```
+
+3. **Configure GitHub Pages**
+   - Go to repository Settings → Pages
+   - Source: Deploy from a branch
+   - Branch: `gh-pages` (or your preferred branch)
+   - Folder: `/ (root)`
+
+4. **Update Repository Settings**
+   - Enable GitHub Pages
+   - Set branch to deploy from
+   - Your site will be available at: `https://mohanreddy8474.github.io/portfolio`
+
+### Alternative: GitHub Actions (Recommended)
+
+Create `.github/workflows/deploy.yml`:
+
+```yaml
+name: Deploy to GitHub Pages
+
+on:
+  push:
+    branches: [ main ]
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v3
+      - uses: actions/setup-node@v3
+        with:
+          node-version: '18'
+      - run: npm ci
+      - run: npm run build
+      - name: Deploy
+        uses: peaceiris/actions-gh-pages@v3
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          publish_dir: ./out
 ```
 
-3. Run the development server:
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
+## ⚙️ Configuration
+
+### Environment Variables
+Create `.env.local` for local development:
+```env
+NEXT_PUBLIC_GA_ID=your-google-analytics-id
 ```
 
-4. Open [http://localhost:3000](http://localhost:3000) in your browser.
+### Customization
+- **Personal Info**: Update content in component files
+- **Styling**: Modify `tailwind.config.js` and `globals.css`
+- **Analytics**: Update Google Analytics ID in `Analytics.tsx`
+- **SEO**: Update metadata in `app/layout.tsx`
 
-## 🔧 Configuration
+## 📱 Sections
 
-### Personal Information
-Update the following files with your personal information:
+- **Hero**: Introduction, tagline, and call-to-action
+- **About**: Professional bio, skills, and experience
+- **Experience**: Work history and responsibilities
+- **Education**: Academic background and achievements
+- **Projects**: Portfolio of projects with tech stacks
+- **Achievements**: Awards, certifications, and publications
+- **Contact**: Contact information and social links
 
-- `app/page.tsx` - Main page content
-- `components/Hero.tsx` - Hero section details
-- `components/About.tsx` - About section content
-- `components/Experience.tsx` - Work experience
-- `components/Education.tsx` - Educational background
-- `components/Projects.tsx` - Project portfolio
-- `components/Achievements.tsx` - Awards and certifications
-- `components/Blog.tsx` - Blog posts
-- `components/Contact.tsx` - Contact information
+## 🎨 Design Features
 
-### Social Links
-Update social media links in:
-- `components/Hero.tsx`
-- `components/Footer.tsx`
+- **Minimalist**: Clean, professional design
+- **Responsive**: Mobile-first responsive design
+- **Accessible**: WCAG compliant with proper ARIA labels
+- **Performance**: Optimized for fast loading
+- **SEO**: Search engine optimized with proper meta tags
 
-### Google Analytics
-1. Get your Google Analytics measurement ID
-2. Update `components/Analytics.tsx` with your ID
-3. Replace `G-XXXXXXXXXX` with your actual ID
+## 🔧 Development
 
-### Resume
-1. Add your resume PDF to the `public/` folder
-2. Name it `resume.pdf` or update the links in the code
+### Available Scripts
+- `npm run dev` - Start development server
+- `npm run build` - Build for production
+- `npm run start` - Start production server
+- `npm run lint` - Run ESLint
+- `npm run export` - Export static files
+- `npm run deploy` - Build and prepare for GitHub Pages
 
-## 🚀 Deployment
-
-### Netlify
-1. Push your code to GitHub
-2. Connect your repository to Netlify
-3. Build command: `npm run build`
-4. Publish directory: `.next`
-
-### Vercel
-1. Push your code to GitHub
-2. Import your repository to Vercel
-3. Vercel will automatically detect Next.js and deploy
-
-### GitHub Pages
-1. Update `next.config.js` for static export
-2. Add `export` script to `package.json`
-3. Build and deploy
-
-## 📱 Customization
-
-### Colors
-Update the color scheme in `tailwind.config.js`:
-```javascript
-colors: {
-  primary: {
-    // Your primary color palette
-  }
-}
-```
-
-### Fonts
-Change fonts in `app/layout.tsx`:
-```typescript
-import { YourFont } from 'next/font/google'
-```
-
-### Animations
-Modify animations in `tailwind.config.js` and component files using Framer Motion.
+### Code Style
+- TypeScript for type safety
+- ESLint for code quality
+- Prettier for code formatting
+- Component-based architecture
 
 ## 📄 License
 
@@ -136,10 +180,12 @@ This project is open source and available under the [MIT License](LICENSE).
 
 Contributions are welcome! Please feel free to submit a Pull Request.
 
-## 📞 Support
+## 📞 Contact
 
-If you have any questions or need help, please open an issue on GitHub.
+- **Email**: ssmohanreddy@gmail.com
+- **LinkedIn**: [mohan8474](https://www.linkedin.com/in/mohan8474/)
+- **GitHub**: [mohanreddy8474](https://github.com/mohanreddy8474)
 
 ---
 
-**Built with ❤️ using Next.js, TypeScript, and Tailwind CSS**
+Built with ❤️ using Next.js, Tailwind CSS, and Framer Motion

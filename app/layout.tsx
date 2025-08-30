@@ -7,24 +7,34 @@ import { Analytics } from '@/components/Analytics'
 const inter = Inter({ subsets: ['latin'] })
 
 export const metadata: Metadata = {
-  metadataBase: new URL('https://your-portfolio.com'),
-  title: 'Mohan Reddy - Python Developer & AI/ML Enthusiast',
-  description: 'Python Developer & AI/ML Enthusiast, passionate about building scalable backend systems and AI-driven applications. Based in Hyderabad, India.',
-  keywords: ['Python Developer', 'AI/ML', 'Backend Development', 'FastAPI', 'Flask', 'Machine Learning', 'Hyderabad'],
-  authors: [{ name: 'Mohan Reddy' }],
-  creator: 'Mohan Reddy',
+  title: 'Sai Mohan Reddy - Python Developer & AI/ML Enthusiast',
+  description: 'Personal portfolio showcasing Python development, AI/ML projects, and full-stack applications. Specializing in FastAPI, Flask, and machine learning solutions.',
+  keywords: ['Python Developer', 'AI/ML', 'FastAPI', 'Flask', 'Machine Learning', 'Full Stack Developer', 'Portfolio'],
+  authors: [{ name: 'Sai Mohan Reddy' }],
+  creator: 'Sai Mohan Reddy',
+  publisher: 'Sai Mohan Reddy',
+  metadataBase: new URL('https://mohanreddy8474.github.io'),
   openGraph: {
-    type: 'website',
+    title: 'Sai Mohan Reddy - Python Developer & AI/ML Enthusiast',
+    description: 'Personal portfolio showcasing Python development, AI/ML projects, and full-stack applications.',
+    url: 'https://mohanreddy8474.github.io/portfolio',
+    siteName: 'Sai Mohan Reddy Portfolio',
+    images: [
+      {
+        url: '/og-image.jpg',
+        width: 1200,
+        height: 630,
+        alt: 'Sai Mohan Reddy Portfolio',
+      },
+    ],
     locale: 'en_US',
-    url: 'https://your-portfolio.com',
-    title: 'Mohan Reddy - Python Developer & AI/ML Enthusiast',
-    description: 'Python Developer & AI/ML Enthusiast, passionate about building scalable backend systems and AI-driven applications.',
-    siteName: 'Mohan Reddy Portfolio',
+    type: 'website',
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'Mohan Reddy - Python Developer & AI/ML Enthusiast',
-    description: 'Python Developer & AI/ML Enthusiast, passionate about building scalable backend systems and AI-driven applications.',
+    title: 'Sai Mohan Reddy - Python Developer & AI/ML Enthusiast',
+    description: 'Personal portfolio showcasing Python development, AI/ML projects, and full-stack applications.',
+    images: ['/og-image.jpg'],
   },
   robots: {
     index: true,
@@ -36,6 +46,9 @@ export const metadata: Metadata = {
       'max-image-preview': 'large',
       'max-snippet': -1,
     },
+  },
+  verification: {
+    google: 'your-google-verification-code',
   },
 }
 
