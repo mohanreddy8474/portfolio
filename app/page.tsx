@@ -1,3 +1,7 @@
+'use client'
+
+import { useState, useEffect } from 'react'
+import { motion } from 'framer-motion'
 import { Header } from '@/components/Header'
 import { Hero } from '@/components/Hero'
 import { About } from '@/components/About'
@@ -9,8 +13,21 @@ import { Contact } from '@/components/Contact'
 import { Footer } from '@/components/Footer'
 
 export default function Home() {
+  const [mounted, setMounted] = useState(false)
+
+  useEffect(() => {
+    setMounted(true)
+  }, [])
+
+  if (!mounted) return null
+
   return (
-    <main className="min-h-screen bg-white dark:bg-dark-900">
+    <motion.main 
+      className="min-h-screen bg-white dark:bg-dark-900"
+      initial={{ opacity: 0 }}
+      animate={{ opacity: 1 }}
+      transition={{ duration: 0.5 }}
+    >
       <Header />
       <Hero />
       <About />
@@ -20,6 +37,6 @@ export default function Home() {
       <Achievements />
       <Contact />
       <Footer />
-    </main>
+    </motion.main>
   )
 }

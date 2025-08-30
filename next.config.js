@@ -1,10 +1,6 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
-  output: 'export',
-  trailingSlash: true,
-  images: {
-    unoptimized: true
-  }
+  // Next.js 14 no longer needs appDir experimental flag
 }
 
 module.exports = nextConfig
