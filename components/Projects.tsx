@@ -44,15 +44,15 @@ export function Projects() {
       github: 'https://github.com/mohanreddy8474/Deepfake-detection-in-digital-media-forensics',
       icon: Bot,
       category: 'AI/ML'
-    },
-    {
-      title: 'Machine Learning Model API',
-      description: 'Production-ready ML model serving API with model versioning, A/B testing, and performance monitoring. Supports multiple ML frameworks and deployment strategies.',
-      techStack: ['Python', 'FastAPI', 'MLflow', 'Docker', 'Kubernetes', 'Prometheus'],
-      github: 'https://github.com/yourusername/ml-api',
-      icon: Bot,
-      category: 'AI/ML'
     }
+    // {
+    //   title: 'Machine Learning Model API',
+    //   description: 'Production-ready ML model serving API with model versioning, A/B testing, and performance monitoring. Supports multiple ML frameworks and deployment strategies.',
+    //   techStack: ['Python', 'FastAPI', 'MLflow', 'Docker', 'Kubernetes', 'Prometheus'],
+    //   github: 'https://github.com/yourusername/ml-api',
+    //   icon: Bot,
+    //   category: 'AI/ML'
+    // }
   ]
 
   const containerVariants = {
