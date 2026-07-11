@@ -7,16 +7,16 @@ import { Analytics } from '@/components/Analytics'
 const inter = Inter({ subsets: ['latin'] })
 
 export const metadata: Metadata = {
-  title: 'Sai Mohan Reddy - Python Developer & AI/ML Enthusiast',
-  description: 'Personal portfolio showcasing Python development, AI/ML projects, and full-stack applications. Specializing in FastAPI, Flask, and machine learning solutions.',
-  keywords: ['Python Developer', 'AI/ML', 'FastAPI', 'Flask', 'Machine Learning', 'Full Stack Developer', 'Portfolio'],
+  title: 'Sai Mohan Reddy - Python Backend Engineer',
+  description: 'Portfolio of a Python Backend Engineer with 3.5+ years of experience building scalable backend systems, AI/LLM applications, and REST APIs with FastAPI, Flask, and AWS.',
+  keywords: ['Python Backend Engineer', 'AI/LLM', 'FastAPI', 'Flask', 'LangGraph', 'AWS', 'REST APIs', 'Portfolio'],
   authors: [{ name: 'Sai Mohan Reddy' }],
   creator: 'Sai Mohan Reddy',
   publisher: 'Sai Mohan Reddy',
   metadataBase: new URL('https://mohanreddy8474.github.io'),
   openGraph: {
-    title: 'Sai Mohan Reddy - Python Developer & AI/ML Enthusiast',
-    description: 'Personal portfolio showcasing Python development, AI/ML projects, and full-stack applications.',
+    title: 'Sai Mohan Reddy - Python Backend Engineer',
+    description: 'Portfolio of a Python Backend Engineer with 3.5+ years of experience building scalable backend systems, AI/LLM applications, and REST APIs.',
     url: 'https://mohanreddy8474.github.io/portfolio',
     siteName: 'Sai Mohan Reddy Portfolio',
     images: [
@@ -32,8 +32,8 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'Sai Mohan Reddy - Python Developer & AI/ML Enthusiast',
-    description: 'Personal portfolio showcasing Python development, AI/ML projects, and full-stack applications.',
+    title: 'Sai Mohan Reddy - Python Backend Engineer',
+    description: 'Portfolio of a Python Backend Engineer with 3.5+ years of experience building scalable backend systems, AI/LLM applications, and REST APIs.',
     images: ['/og-image.jpg'],
   },
   robots: {

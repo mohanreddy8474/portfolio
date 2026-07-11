@@ -5,9 +5,11 @@ import { MapPin, Calendar, Building, Code } from 'lucide-react'
 
 export function About() {
   const skills = [
-    'Python', 'Flask', 'FastAPI', 'SQL', 'NoSQL', 'AWS', 
-    'Docker', 'LLMs', 'Git', 'Machine Learning', 'System Design',
-    'REST APIs', 'Microservices', 'CI/CD', 'AI/ML'
+    'Python', 'JavaScript', 'SQL', 'Flask', 'FastAPI', 'REST APIs',
+    'LLMs', 'LangChain', 'LangGraph', 'Prompt Engineering', 'Embeddings', 'Vector Databases',
+    'AWS', 'S3', 'DynamoDB', 'PostgreSQL', 'MySQL', 'SQLite', 'Milvus', 'Pinecone',
+    'Docker', 'Git', 'Postman', 'pytest', 'AWS CLI',
+    'NoSQL', 'Machine Learning', 'System Design', 'Microservices', 'CI/CD', 'AI/ML'
   ]
 
   const containerVariants = {
@@ -111,7 +113,7 @@ export function About() {
                   transition: { duration: 0.6 }
                 }}
               >
-                Python Developer & AI/ML Enthusiast
+                Python Backend Engineer
               </motion.h3>
               <motion.p 
                 className="text-gray-600 dark:text-gray-300 leading-relaxed mb-6"
@@ -121,9 +123,9 @@ export function About() {
                   transition: { duration: 0.6, delay: 0.1 }
                 }}
               >
-                I'm a passionate Python developer with expertise in building scalable backend systems and AI-driven applications. 
-                With a strong foundation in AI/ML, I enjoy solving complex problems and creating 
-                efficient solutions that make a difference.
+                Python Backend Engineer with 3.5+ years of experience building scalable backend systems 
+                and AI/LLM applications. I specialize in REST APIs with FastAPI and Flask, cloud deployments on AWS, 
+                and delivering production-ready solutions for complex problems.
               </motion.p>
               <motion.p 
                 className="text-gray-600 dark:text-gray-300 leading-relaxed"
@@ -160,7 +162,7 @@ export function About() {
                   <Building className="h-5 w-5 text-primary-600" />
                 </motion.div>
                 <span className="text-gray-700 dark:text-gray-300">
-                  <span className="font-semibold">Current Role:</span> Senior Associate @ Annalect
+                  <span className="font-semibold">Current Role:</span> Consultant @ Thoughtworks
                 </span>
               </motion.div>
               <motion.div 
@@ -176,7 +178,7 @@ export function About() {
                   <Calendar className="h-5 w-5 text-primary-600" />
                 </motion.div>
                 <span className="text-gray-700 dark:text-gray-300">
-                  <span className="font-semibold">Experience:</span> 3 Years
+                  <span className="font-semibold">Experience:</span> 3.5+ Years
                 </span>
               </motion.div>
               <motion.div 
@@ -208,7 +210,7 @@ export function About() {
                   <Code className="h-5 w-5 text-primary-600" />
                 </motion.div>
                 <span className="text-gray-700 dark:text-gray-300">
-                  <span className="font-semibold">Focus:</span> Backend, AI/ML, FastAPI, LLMs
+                  <span className="font-semibold">Focus:</span> Backend, AI/LLM, FastAPI, AWS
                 </span>
               </motion.div>
             </motion.div>

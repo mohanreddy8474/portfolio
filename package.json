@@ -5,8 +5,10 @@
   "scripts": {
     "dev": "next dev",
     "build": "next build",
+    "build:pages": "NEXT_PUBLIC_BASE_PATH=/portfolio next build",
     "start": "next start",
-    "lint": "next lint"
+    "lint": "next lint",
+    "preview:pages": "npm run build:pages && npx serve out -l 3000"
   },
   "dependencies": {
     "next": "14.0.4",

@@ -6,21 +6,31 @@ import { Calendar, MapPin, Building } from 'lucide-react'
 export function Experience() {
   const experiences = [
     {
-      company: 'Annalect',
-      title: 'Senior Associate',
-      duration: 'Nov 2022 - Present',
+      company: 'Thoughtworks',
+      title: 'Consultant – Python Developer',
+      duration: 'Oct 2025 - Present',
       location: 'Hyderabad, India',
       responsibilities: [
-        'Built a Gen AI microservice using async programming for scalable embedding metadata and approvals.',
-        'Achieved 90%+ test coverage with unit and integration tests using Pytest.',
-        'Designed APIs for vector databases to handle data retrieval and collection management.',
+        'Built LangGraph agent workflows for orchestrating multi-step AI tasks.',
+        'Implemented Agent-to-Agent (A2A) communication between autonomous agents.',
+        'Integrated Langfuse for observability, tracing, and monitoring of AI workflows.',
+        'Designed and developed AI workflow orchestration pipelines for production use.'
+      ]
+    },
+    {
+      company: 'Annalect',
+      title: 'Senior Associate – Python Developer',
+      duration: 'Nov 2022 - Oct 2025',
+      location: 'Hyderabad, India',
+      responsibilities: [
+        'Built GenAI microservices using async programming for scalable embedding metadata and approvals.',
+        'Developed REST APIs with FastAPI and Flask for production backend services.',
         'Integrated Azure OpenAI embeddings for text data conversion.',
+        'Designed APIs for vector databases to handle data retrieval and collection management.',
         'Integrated GCP Speech-to-Text API for audio transcription.',
-        'Developed APIs to ingest test data from multiple sources (S3, text, URLs).',
-        'Containerized microservices with Docker for easy deployment.',
+        'Built APIs with OpenPyxl for Excel import/export automation with database sync.',
         'Created custom middleware in Flask/FastAPI for centralized I/O logging.',
-        'Built APIs with OpenPyxl for Excel import/export with database sync.',
-        'Implemented custom export templates (OpenPyxl + S3) for personalized client data exports.'
+        'Achieved 90%+ test coverage with unit and integration tests using pytest.'
       ]
     }
   ]

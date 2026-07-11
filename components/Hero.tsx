@@ -2,6 +2,7 @@
 
 import { Download, Mail, Github, Linkedin } from 'lucide-react'
 import { motion } from 'framer-motion'
+import { basePath, resumeVersion } from '@/lib/site'
 
 export function Hero() {
   const socialLinks = [
@@ -117,7 +118,7 @@ export function Hero() {
             transition={{ duration: 0.8, delay: 0.4 }}
             className="text-xl sm:text-2xl text-gray-600 dark:text-gray-300 mb-8 max-w-3xl mx-auto leading-relaxed"
           >
-            Python Developer & AI/ML Enthusiast, passionate about building scalable backend systems and AI-driven applications.
+            Python Backend Engineer passionate about building scalable backend systems and AI/LLM applications.
           </motion.p>
 
           {/* CTA Buttons */}
@@ -128,8 +129,8 @@ export function Hero() {
             className="flex flex-col sm:flex-row gap-4 justify-center items-center mb-12"
           >
             <motion.a
-              href="/resume.pdf"
-              download
+              href={`${basePath}/resume.pdf?v=${resumeVersion}`}
+              download="Sai_Mohan_Reddy_Resume.pdf"
               className="btn-primary inline-flex gap-2"
               whileHover={{ 
                 scale: 1.05,

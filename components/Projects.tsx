@@ -1,10 +1,26 @@
 'use client'
 
 import { motion } from 'framer-motion'
-import { Github, Code, Database, Cloud, Bot } from 'lucide-react'
+import { Github, Code, Database, Bot, ExternalLink } from 'lucide-react'
 
 export function Projects() {
   const projects = [
+    {
+      title: 'Thoughtworks Carrom Tournament Management System',
+      description: 'Developed a web application to manage the internal Thoughtworks Carrom Tournament, replacing manual spreadsheet-based tracking. Features player registration, singles & doubles categories, automatic match generation, live score updates, standings, tournament schedule, leaderboard, admin dashboard, and secure Supabase authentication.',
+      techStack: ['JavaScript', 'HTML/CSS', 'Supabase', 'GitHub Pages'],
+      liveDemo: 'https://thoughtworks-carrom.github.io/Carrom-Tournament/',
+      github: 'https://github.com/thoughtworks-carrom/Carrom-Tournament',
+      icon: Database,
+      category: 'Full-Stack'
+    },
+    {
+      title: 'Multimodal Chat Application',
+      description: 'Built a multimodal AI chat application with FastAPI REST APIs supporting image and text inputs. Integrated GPT-4 via AWS Bedrock with AWS S3 for image storage, enabling users to chat with AI using both text and images in a single conversation.',
+      techStack: ['FastAPI', 'GPT-4', 'AWS Bedrock', 'AWS S3', 'REST APIs', 'Python'],
+      icon: Bot,
+      category: 'AI/ML'
+    },
     {
       title: 'OCR Web Application',
       description: 'A web-based OCR application that lets users upload images and extract text in real-time using FastAPI, WebSocket, and Tesseract OCR.',
@@ -28,14 +44,6 @@ export function Projects() {
       github: 'https://github.com/mohanreddy8474/Classification-of-Ventricular-Arrhythmia',
       icon: Bot,
       category: 'AI/ML'
-    },
-    {
-      title: 'Exploratory Data Analysis on Suicide Rate',
-      description: 'Exploratory data analaysis is performed on the dataset Sucides in India obtained from kaggle Dataset contains data from 2001-2012',
-      techStack: ['Python', 'NumPy', 'Matplotlib', 'Pandas'],
-      github: 'https://github.com/mohanreddy8474/EDA-on-Suicides-in-india',
-      icon: Bot,
-      category: 'Data Analysis'
     },
     {
       title: 'Deepfake detection in digital media forensics',
@@ -202,25 +210,47 @@ export function Projects() {
                 
                 {/* Project Links */}
                 <motion.div 
-                  className="flex justify-center"
+                  className="flex justify-center gap-3"
                   initial={{ opacity: 0, y: 10 }}
                   whileInView={{ opacity: 1, y: 0 }}
                   transition={{ delay: 0.3 }}
                 >
-                  <motion.a
-                    href={project.github}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="flex items-center justify-center space-x-2 bg-primary-600 hover:bg-primary-700 text-white py-2 px-6 rounded-lg transition-colors duration-200 text-sm font-medium"
-                    whileHover={{ 
-                      scale: 1.05,
-                      boxShadow: "0 10px 15px -3px rgba(59, 130, 246, 0.3)"
-                    }}
-                    whileTap={{ scale: 0.95 }}
-                  >
-                    <Github className="h-4 w-4" />
-                    <span>View Code</span>
-                  </motion.a>
+                  {'liveDemo' in project && project.liveDemo && (
+                    <motion.a
+                      href={project.liveDemo}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="flex items-center justify-center space-x-2 bg-primary-600 hover:bg-primary-700 text-white py-2 px-6 rounded-lg transition-colors duration-200 text-sm font-medium"
+                      whileHover={{ 
+                        scale: 1.05,
+                        boxShadow: "0 10px 15px -3px rgba(59, 130, 246, 0.3)"
+                      }}
+                      whileTap={{ scale: 0.95 }}
+                    >
+                      <ExternalLink className="h-4 w-4" />
+                      <span>Live Demo</span>
+                    </motion.a>
+                  )}
+                  {project.github && (
+                    <motion.a
+                      href={project.github}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className={`flex items-center justify-center space-x-2 py-2 px-6 rounded-lg transition-colors duration-200 text-sm font-medium ${
+                        'liveDemo' in project && project.liveDemo
+                          ? 'border border-primary-600 text-primary-600 hover:bg-primary-50 dark:hover:bg-primary-900/20'
+                          : 'bg-primary-600 hover:bg-primary-700 text-white'
+                      }`}
+                      whileHover={{ 
+                        scale: 1.05,
+                        boxShadow: "0 10px 15px -3px rgba(59, 130, 246, 0.3)"
+                      }}
+                      whileTap={{ scale: 0.95 }}
+                    >
+                      <Github className="h-4 w-4" />
+                      <span>View Code</span>
+                    </motion.a>
+                  )}
                 </motion.div>
               </motion.div>
             ))}

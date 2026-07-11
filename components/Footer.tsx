@@ -34,8 +34,8 @@ export function Footer() {
               Sai Mohan Reddy
             </h3>
             <p className="text-gray-300 mb-6 leading-relaxed max-w-2xl mx-auto">
-              Python Developer & AI/ML Enthusiast passionate about building scalable 
-              backend systems and AI-driven applications.
+              Python Backend Engineer passionate about building scalable 
+              backend systems and AI/LLM applications.
             </p>
             <div className="flex justify-center space-x-4">
               {socialLinks.map((social) => (
